@@ -1,0 +1,12 @@
+[package]
+name = "aggregator"
+version = "0.1.0"
+authors = ["fronox <serjzv@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+csv = "1"
+kafka = "0.7"
+json = "0.11.13"
+num-traits = "0.2"
+eventual = "0.1.7"

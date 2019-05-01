@@ -1,0 +1,13 @@
+{
+  "sources": [
+    "media_markt"
+  ],
+  "media_markt": {
+    "fname": "t_st_1_2_3.csv",
+    "rowN": 0
+  },
+  "other": {
+    "fname": "",
+    "rowN": 0
+  }
+}
