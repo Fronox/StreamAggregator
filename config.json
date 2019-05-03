@@ -1,13 +1,22 @@
 {
   "sources": [
-    "media_markt"
+    "media_markt_t1",
+    "media_markt_t2",
+    "media_markt_t6"
   ],
-  "media_markt": {
-    "fname": "t_st_1_2_3.csv",
-    "rowN": 0
+  "media_markt_t1": {
+    "fname": "T1_Final.csv",
+    "currency_file": "EURUSD.csv",
+    "rowN": 8
   },
-  "other": {
-    "fname": "",
-    "rowN": 0
+  "media_markt_t2": {
+    "fname": "T2_Final.csv",
+    "currency_file": "EURUSD.csv",
+    "rowN": 8
+  },
+  "media_markt_t6": {
+    "fname": "T6_Final.csv",
+    "currency_file": "EURUSD.csv",
+    "rowN": 8
   }
 }
