@@ -7,16 +7,16 @@
   "media_markt_t1": {
     "fname": "T1_Final.csv",
     "currency_file": "EURUSD.csv",
-    "rowN": 8
+    "rowN": 0
   },
   "media_markt_t2": {
     "fname": "T2_Final.csv",
     "currency_file": "EURUSD.csv",
-    "rowN": 8
+    "rowN": 0
   },
   "media_markt_t6": {
     "fname": "T6_Final.csv",
     "currency_file": "EURUSD.csv",
-    "rowN": 8
+    "rowN": 0
   }
 }

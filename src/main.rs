@@ -29,7 +29,6 @@ fn produce_message(data: String, topic: &str, brokers: Vec<String>) -> Result<()
 //TODO: change reading (too many useless operations should be replaced with string processing functions)
 fn read_and_send_data(filepath: &str, currency_fname: &str, row_skip: usize, topic: &str) {
     let broker: String = "localhost:9092".to_string();
-    //let topic: &str = "test";
     let mut main_data_reader = csv::Reader::from_path(filepath)
         .expect("File open error");
     let main_data = main_data_reader.records().skip(row_skip).take(ROW_COUNT);
@@ -44,7 +43,7 @@ fn read_and_send_data(filepath: &str, currency_fname: &str, row_skip: usize, top
             let snd_data1 = str1.iter()
                 .map(|x| {x.to_string()})
                 .fold("".to_string(), |acc, el| {
-                    if acc == "".to_string(){
+                    if acc == "".to_string() {
                         el
                     } else {
                         format!("{} {}", acc, el)
@@ -86,40 +85,6 @@ fn data_process(config_json: &mut JsonValue, name: &str, config_fname: &str) {
 }
 
 fn main() {
-    /*let start = std::time::SystemTime::now();
-    let api_key = alpha_vantage::set_api("DHIA0K4MIXGWKLM3");
-    let data = api_key.forex(
-        ForexFunction::Weekly,
-        "EUR",
-        "USD",
-        Interval::None,
-    OutputSize::None);
-    let mut entries = data.entry().unwrap();
-    entries.sort_by(|x, y| {
-        x.time().partial_cmp(&y.time()).unwrap()
-    });
-    let period = entries.into_iter().filter(|x| {
-            x.time() >= "2016-10-30".to_string() && x.time() <= "2018-10-29".to_string()
-        }).collect::<Vec<_>>();*/
-    //println!("{:?}", period);
-
-    /*let client = alphavantage::Client::new("DHIA0K4MIXGWKLM3");
-    let data: TimeSeries = client.get_time_series_weekly("EUR").unwrap();
-    println!("{:?}", data);*/
-
-    /*let mut writer = csv::Writer::from_path("new.csv").unwrap();
-    writer.write_record(&["DATE", "OPEN", "HIGH", "LOW", "CLOSE"]);
-    for x in period {
-        writer.write_record(&[
-            x.time(),
-            x.open().to_string(),
-            x.high().to_string(),
-            x.low().to_string(),
-            x.close().to_string()]
-        ).unwrap();
-    }*/
-
-
     let config_fname: &str = "config.json";
     let config_file: String = fs::read_to_string(config_fname)
         .expect("Json read error");
